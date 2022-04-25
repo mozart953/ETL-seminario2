@@ -1,0 +1,1570 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/23/2022 9:06:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-8VOKSOEH"
+  DTS:CreatorName="LAPTOP-8VOKSOEH\Wilson Pop"
+  DTS:DTSID="{1A6CCF31-5C9C-4862-864B-EDD71960BAEA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{8C46258C-D1AF-41AA-8326-617AF0467F66}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[127.0.0.1.clubfilm.root]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{D920A3A0-9179-444B-AC9B-B9359C5585BF}"
+      DTS:ObjectName="127.0.0.1.clubfilm.root">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=127.0.0.1;user id=root;database=clubfilm;port=33061;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAczIqzu93JUSxXyhQA+GJQgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAATqC95hxsTZCiXvodZTxVI6w16nuIeiXx5NB1t+KmnTgAAAAAOgAAAAAIAACAAAACDbmXNyDlpcsMH6Mfr/b+/hPC3ub9mWX5wGxJqYtO/8SAAAAD46CsfoJC02bGT+YE3iaLoQXW2Q5B4eohcvdXE6OXdu0AAAAAhQ85RudjD77DNqLVaDzcDzgAUadUKGdpDY9DNJwMgxD9c8nIpINFb7CjcZ8TSFTiiNMIkBN2aJAr+ZRHyaNGI</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{927582D9-95EB-4438-A542-AC70085E33E9}"
+      DTS:ObjectName="127.0.0.1.sakila.root">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=127.0.0.1;user id=root;port=33061;database=sakila;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAczIqzu93JUSxXyhQA+GJQgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB0QXYU47jT5fHASvPx9yDkWZIAiJGRYDArcEODgMOHBgAAAAAOgAAAAAIAACAAAAC5+HyjevnqeirmB2S3vQqhtrILefmClk8QqGVublJx5yAAAACdok1OztBbJfWfgUAkT/XelxkkhbuYvnmG/R8xYDLtZ0AAAADXSO5gadE9Ra6n9wsugK2721rM74wdaWWmlcKDXM3zD6zoJHpFP6WDESxYHXbrQUFoDFhP/Hbkikzi7vRwdTsO</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-8VOKSOEH\SQLEXPRESS01.AdventureWorksDW2019]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2181DDCF-981F-40C6-A05D-69493E6F9356}"
+      DTS:ObjectName="LAPTOP-8VOKSOEH\SQLEXPRESS01.AdventureWorksDW2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-8VOKSOEH\SQLEXPRESS01;Initial Catalog=AdventureWorksDW2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MYSQL2.root]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{C82EA8D8-595D-4BC7-872A-608A956AB1C6}"
+      DTS:ObjectName="MYSQL2.root">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=root;Dsn=MYSQL2;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAczIqzu93JUSxXyhQA+GJQgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADh94A2MkE6pKU68ijzEKe0bTIjAO3mzADxn472NGkD9gAAAAAOgAAAAAIAACAAAABttE5CbZI+LdCNMzYt3llmVT+UwOBUvf9IiZI0uNGL1SAAAACIV/90N6zy+5hS/KRn+XUw5KSs95k3y3myEgrfNrpsh0AAAAANbQq6BvaL2twhCZDgrAbn31cG78x3/UIdVxl9wUp2k7b91yLqGILVGOsYdyCIjX4M/p6+xrrflk3iK17DcLEr</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{77A78106-3ED2-4567-BC8F-63D94A418900}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de ODBC"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="Destino de ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de ODBC"
+              name="Destino de ODBC"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla que debe recuperarse."
+                  expressionType="Notify"
+                  name="TableName">dim_film</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas recuperadas por lote."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de filas insertadas en la misma transacción."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la asignación del tamaño de los fragmentos de las columnas LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos que se debe esperar para que una instrucción SQL se ejecute antes de volver a la aplicación."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Página de códigos que se usará cuando la información de la página de códigos no esté disponible en el origen de datos."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Método usado para insertar datos. Los valores posibles son &quot;Batch&quot; o &quot;Row by row&quot;."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo de datos ODBC C para el enlace de datos numéricos."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la manera en la que el componente enlazará columnas de tipos de cadena byte o multibyte (es decir, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). Las opciones son Unicode (SQL_C_WCHAR) y ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MYSQL2.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[MYSQL2.root]"
+                  description="Conexión de runtime de ODBC usada para acceder a la base de datos."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[id_film]"
+                      cachedDataType="ui2"
+                      cachedName="id_film"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[id_film]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[id_film]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[name]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[name]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[category]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="category"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[category]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[category]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[id_film]"
+                      dataType="i4"
+                      name="id_film" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[category]"
+                      dataType="wstr"
+                      length="45"
+                      name="category" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ODBC"
+                  synchronousInputId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de ODBC 1"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="Destino de ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de ODBC"
+              name="Destino de ODBC 1"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla que debe recuperarse."
+                  expressionType="Notify"
+                  name="TableName">dim_customer</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas recuperadas por lote."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de filas insertadas en la misma transacción."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la asignación del tamaño de los fragmentos de las columnas LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos que se debe esperar para que una instrucción SQL se ejecute antes de volver a la aplicación."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Página de códigos que se usará cuando la información de la página de códigos no esté disponible en el origen de datos."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Método usado para insertar datos. Los valores posibles son &quot;Batch&quot; o &quot;Row by row&quot;."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo de datos ODBC C para el enlace de datos numéricos."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la manera en la que el componente enlazará columnas de tipos de cadena byte o multibyte (es decir, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). Las opciones son Unicode (SQL_C_WCHAR) y ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MYSQL2.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[MYSQL2.root]"
+                  description="Conexión de runtime de ODBC usada para acceder a la base de datos."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].Columns[ID_CUSTOMER]"
+                      cachedDataType="ui2"
+                      cachedName="ID_CUSTOMER"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[ID_CUSTOMER]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[ID_CUSTOMER]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].Columns[NAME_VARCHAR]"
+                      cachedDataType="wstr"
+                      cachedLength="45"
+                      cachedName="NAME_VARCHAR"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[NAME_VARCHAR]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[NAME_VARCHAR]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].Columns[ADDRESS_CUSTOMER]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ADDRESS_CUSTOMER"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[ADDRESS_CUSTOMER]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[ADDRESS_CUSTOMER]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].Columns[CITY_CUSTOMER]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CITY_CUSTOMER"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[CITY_CUSTOMER]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[CITY_CUSTOMER]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].Columns[COUNTRY_CUSTOMER]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="COUNTRY_CUSTOMER"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[COUNTRY_CUSTOMER]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[COUNTRY_CUSTOMER]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[ID_CUSTOMER]"
+                      dataType="i4"
+                      name="ID_CUSTOMER" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[NAME_VARCHAR]"
+                      dataType="wstr"
+                      length="45"
+                      name="NAME_VARCHAR" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[ADDRESS_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      name="ADDRESS_CUSTOMER" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[CITY_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      name="CITY_CUSTOMER" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC].ExternalColumns[COUNTRY_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      name="COUNTRY_CUSTOMER" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Outputs[Salida de error de destino de ODBC]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ODBC"
+                  synchronousInputId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC 1.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 1.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC 1.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de ODBC 2"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="Destino de ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de ODBC"
+              name="Destino de ODBC 2"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla que debe recuperarse."
+                  expressionType="Notify"
+                  name="TableName">dim_store</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas recuperadas por lote."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de filas insertadas en la misma transacción."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la asignación del tamaño de los fragmentos de las columnas LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos que se debe esperar para que una instrucción SQL se ejecute antes de volver a la aplicación."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Página de códigos que se usará cuando la información de la página de códigos no esté disponible en el origen de datos."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Método usado para insertar datos. Los valores posibles son &quot;Batch&quot; o &quot;Row by row&quot;."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo de datos ODBC C para el enlace de datos numéricos."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la manera en la que el componente enlazará columnas de tipos de cadena byte o multibyte (es decir, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). Las opciones son Unicode (SQL_C_WCHAR) y ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MYSQL2.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[MYSQL2.root]"
+                  description="Conexión de runtime de ODBC usada para acceder a la base de datos."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].Columns[ID_STORE]"
+                      cachedDataType="ui1"
+                      cachedName="ID_STORE"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].ExternalColumns[ID_STORE]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[ID_STORE]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].Columns[ADDRESS_STORE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ADDRESS_STORE"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].ExternalColumns[ADDRESS_STORE]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[ADDRESS_STORE]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].Columns[CITY_STORE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CITY_STORE"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].ExternalColumns[CITY_STORE]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[CITY_STORE]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].Columns[COUNTRY]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="COUNTRY"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].ExternalColumns[COUNTRY]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[COUNTRY]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].ExternalColumns[ID_STORE]"
+                      dataType="i4"
+                      name="ID_STORE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].ExternalColumns[ADDRESS_STORE]"
+                      dataType="wstr"
+                      length="50"
+                      name="ADDRESS_STORE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].ExternalColumns[CITY_STORE]"
+                      dataType="wstr"
+                      length="50"
+                      name="CITY_STORE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC].ExternalColumns[COUNTRY]"
+                      dataType="wstr"
+                      length="50"
+                      name="COUNTRY" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Outputs[Salida de error de destino de ODBC]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ODBC"
+                  synchronousInputId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC 2.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 2.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC 2.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de ODBC 3"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="Destino de ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de ODBC"
+              name="Destino de ODBC 3"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla que debe recuperarse."
+                  expressionType="Notify"
+                  name="TableName">date_sales</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas recuperadas por lote."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de filas insertadas en la misma transacción."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la asignación del tamaño de los fragmentos de las columnas LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos que se debe esperar para que una instrucción SQL se ejecute antes de volver a la aplicación."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Página de códigos que se usará cuando la información de la página de códigos no esté disponible en el origen de datos."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Método usado para insertar datos. Los valores posibles son &quot;Batch&quot; o &quot;Row by row&quot;."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo de datos ODBC C para el enlace de datos numéricos."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la manera en la que el componente enlazará columnas de tipos de cadena byte o multibyte (es decir, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). Las opciones son Unicode (SQL_C_WCHAR) y ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MYSQL2.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[MYSQL2.root]"
+                  description="Conexión de runtime de ODBC usada para acceder a la base de datos."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].Columns[ID_DATE_SALES]"
+                      cachedDataType="ui2"
+                      cachedName="ID_DATE_SALES"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].ExternalColumns[ID_DATE_SALES]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[ID_DATE_SALES]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].Columns[YEAR]"
+                      cachedDataType="i8"
+                      cachedName="YEAR"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].ExternalColumns[YEAR]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].Columns[MONTH]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="MONTH"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].ExternalColumns[MONTH]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[MONTH]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].Columns[DAY]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="DAY"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].ExternalColumns[DAY]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[DAY]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].ExternalColumns[ID_DATE_SALES]"
+                      dataType="i4"
+                      name="ID_DATE_SALES" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].ExternalColumns[YEAR]"
+                      dataType="wstr"
+                      length="45"
+                      name="YEAR" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].ExternalColumns[MONTH]"
+                      dataType="wstr"
+                      length="45"
+                      name="MONTH" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC].ExternalColumns[DAY]"
+                      dataType="wstr"
+                      length="45"
+                      name="DAY" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Outputs[Salida de error de destino de ODBC]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ODBC"
+                  synchronousInputId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC 3.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC 3.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC 3.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Tabla customer"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Tabla customer"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select  c.customer_id as ID_CUSTOMER, c.first_name as NAME_VARCHAR, addr.address as ADDRESS_CUSTOMER, 
+ci.city as CITY_CUSTOMER, coun.country as COUNTRY_CUSTOMER
+from customer as c, address as addr, city as ci, country as coun 
+where c.address_id =  addr.address_id and addr.city_id = ci.city_id and ci.country_id = coun.country_id</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Tabla customer.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[ID_CUSTOMER]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[ID_CUSTOMER]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[ID_CUSTOMER]"
+                      name="ID_CUSTOMER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[NAME_VARCHAR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[NAME_VARCHAR]"
+                      length="45"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[NAME_VARCHAR]"
+                      name="NAME_VARCHAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[ADDRESS_CUSTOMER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[ADDRESS_CUSTOMER]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[ADDRESS_CUSTOMER]"
+                      name="ADDRESS_CUSTOMER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[CITY_CUSTOMER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[CITY_CUSTOMER]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[CITY_CUSTOMER]"
+                      name="CITY_CUSTOMER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[COUNTRY_CUSTOMER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[COUNTRY_CUSTOMER]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].Columns[COUNTRY_CUSTOMER]"
+                      name="COUNTRY_CUSTOMER"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[ID_CUSTOMER]"
+                      dataType="ui2"
+                      name="ID_CUSTOMER" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[NAME_VARCHAR]"
+                      dataType="wstr"
+                      length="45"
+                      name="NAME_VARCHAR" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[ADDRESS_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      name="ADDRESS_CUSTOMER" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[CITY_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      name="CITY_CUSTOMER" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET].ExternalColumns[COUNTRY_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      name="COUNTRY_CUSTOMER" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[ID_CUSTOMER]"
+                      dataType="ui2"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[ID_CUSTOMER]"
+                      name="ID_CUSTOMER" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[NAME_VARCHAR]"
+                      dataType="wstr"
+                      length="45"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[NAME_VARCHAR]"
+                      name="NAME_VARCHAR" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[ADDRESS_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[ADDRESS_CUSTOMER]"
+                      name="ADDRESS_CUSTOMER" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[CITY_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[CITY_CUSTOMER]"
+                      name="CITY_CUSTOMER" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[COUNTRY_CUSTOMER]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[COUNTRY_CUSTOMER]"
+                      name="COUNTRY_CUSTOMER" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Tabla films"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Tabla films"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select fi.film_id as id_film, fi.title as name, ca.name as category
+from film as fi, category as ca where ca.category_id = fi.film_id;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Tabla films.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[id_film]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].ExternalColumns[id_film]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[id_film]"
+                      name="id_film"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].ExternalColumns[name]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].ExternalColumns[category]"
+                      length="25"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].Columns[category]"
+                      name="category"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].ExternalColumns[id_film]"
+                      dataType="ui2"
+                      name="id_film" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET].ExternalColumns[category]"
+                      dataType="wstr"
+                      length="25"
+                      name="category" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[id_film]"
+                      dataType="ui2"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[id_film]"
+                      name="id_film" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[category]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[category]"
+                      name="category" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Tabla payment"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Tabla payment"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select b.payment_id  ID_DATE_SALES, year(b.payment_date) AS YEAR, 
+Monthname(b.payment_date) AS MONTH, Dayname(b.payment_date) AS DAY From payment b;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Tabla payment.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[ID_DATE_SALES]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].ExternalColumns[ID_DATE_SALES]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[ID_DATE_SALES]"
+                      name="ID_DATE_SALES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[YEAR]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].ExternalColumns[YEAR]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[YEAR]"
+                      name="YEAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[MONTH]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].ExternalColumns[MONTH]"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[MONTH]"
+                      name="MONTH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[DAY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].ExternalColumns[DAY]"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].Columns[DAY]"
+                      name="DAY"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].ExternalColumns[ID_DATE_SALES]"
+                      dataType="ui2"
+                      name="ID_DATE_SALES" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].ExternalColumns[YEAR]"
+                      dataType="i8"
+                      name="YEAR" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].ExternalColumns[MONTH]"
+                      dataType="wstr"
+                      length="9"
+                      name="MONTH" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET].ExternalColumns[DAY]"
+                      dataType="wstr"
+                      length="9"
+                      name="DAY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[ID_DATE_SALES]"
+                      dataType="ui2"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[ID_DATE_SALES]"
+                      name="ID_DATE_SALES" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[YEAR]"
+                      dataType="i8"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[YEAR]"
+                      name="YEAR" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[MONTH]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[MONTH]"
+                      name="MONTH" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[DAY]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[DAY]"
+                      name="DAY" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Tabla store"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Tabla store"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select stor.store_id as ID_STORE, addr.address as ADDRESS_STORE, ci.city as CITY_STORE, coun.country as COUNTRY
+from address as addr, store as stor, city as ci, country as coun 
+where addr.address_id = stor.address_id and addr.city_id = ci.city_id and ci.country_id = coun.country_id;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Tabla store.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.sakila.root]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[ID_STORE]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].ExternalColumns[ID_STORE]"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[ID_STORE]"
+                      name="ID_STORE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[ADDRESS_STORE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].ExternalColumns[ADDRESS_STORE]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[ADDRESS_STORE]"
+                      name="ADDRESS_STORE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[CITY_STORE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].ExternalColumns[CITY_STORE]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[CITY_STORE]"
+                      name="CITY_STORE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[COUNTRY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].ExternalColumns[COUNTRY]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].Columns[COUNTRY]"
+                      name="COUNTRY"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].ExternalColumns[ID_STORE]"
+                      dataType="ui1"
+                      name="ID_STORE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].ExternalColumns[ADDRESS_STORE]"
+                      dataType="wstr"
+                      length="50"
+                      name="ADDRESS_STORE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].ExternalColumns[CITY_STORE]"
+                      dataType="wstr"
+                      length="50"
+                      name="CITY_STORE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET].ExternalColumns[COUNTRY]"
+                      dataType="wstr"
+                      length="50"
+                      name="COUNTRY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[ID_STORE]"
+                      dataType="ui1"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[ID_STORE]"
+                      name="ID_STORE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[ADDRESS_STORE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[ADDRESS_STORE]"
+                      name="ADDRESS_STORE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[CITY_STORE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[CITY_STORE]"
+                      name="CITY_STORE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[COUNTRY]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[COUNTRY]"
+                      name="COUNTRY" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
+              endId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos\Tabla films.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET1]"
+              endId="Package\Tarea Flujo de datos\Destino de ODBC 1.Inputs[Entrada de destino de ODBC]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos\Tabla customer.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET2]"
+              endId="Package\Tarea Flujo de datos\Destino de ODBC 2.Inputs[Entrada de destino de ODBC]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos\Tabla store.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET3]"
+              endId="Package\Tarea Flujo de datos\Destino de ODBC 3.Inputs[Entrada de destino de ODBC]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos\Tabla payment.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,47"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="344.5,78.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Tarea Flujo de datos\Tabla films"
+          TopLeft="92.6785714285715,76.25" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Tarea Flujo de datos\Tabla payment"
+          TopLeft="788.75,73.75" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Tarea Flujo de datos\Tabla store"
+          TopLeft="537.5,71.25" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Tarea Flujo de datos\Tabla customer"
+          TopLeft="285,73.75" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Tarea Flujo de datos\Destino de ODBC"
+          TopLeft="78.75,207.5" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
+          TopLeft="158.214285714286,118.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,89.25"
+              Start="0,0"
+              End="0,81.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Tarea Flujo de datos\Destino de ODBC 1"
+          TopLeft="281.25,207.5" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET1]"
+          TopLeft="363.375,115.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,91.75"
+              Start="0,0"
+              End="0,84.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,84.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Tarea Flujo de datos\Destino de ODBC 2"
+          TopLeft="526.25,211.25" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET2]"
+          TopLeft="607.125,113.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,98"
+              Start="0,0"
+              End="0,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Tarea Flujo de datos\Destino de ODBC 3"
+          TopLeft="778.75,216.25" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET3]"
+          TopLeft="863.25,115.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,100.5"
+              Start="0,0"
+              End="0,93">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Tabla films">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Tabla payment">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Destino de ODBC">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Destino de ODBC 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Destino de ODBC 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Destino de ODBC 3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
